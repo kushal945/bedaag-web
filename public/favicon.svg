@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="dropGrad" x1="12" y1="8" x2="52" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#06B6D4"/>
+      <stop offset="1" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="sparkleGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#67E8F9"/>
+    </linearGradient>
+  </defs>
+  <!-- Main droplet -->
+  <path d="M32 6C32 6 12 28.5 12 40C12 51.0457 20.9543 60 32 60C43.0457 60 52 51.0457 52 40C52 28.5 32 6 32 6Z" fill="url(#dropGrad)"/>
+  <!-- Gentle sheen -->
+  <path d="M22 36C22 28 28 20 32 16C30 22 24 28 24 38C24 41 25 43 26 45C23.5 43 22 39.8 22 36Z" fill="#FFFFFF" fill-opacity="0.45"/>
+  <!-- Sparkle star -->
+  <path d="M42 22L43.8 26.2L48 28L43.8 29.8L42 34L40.2 29.8L36 28L40.2 26.2L42 22Z" fill="url(#sparkleGrad)"/>
+</svg>
