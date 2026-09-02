@@ -5,6 +5,19 @@
 
 ---
 
+## 📱 Visual Mockups & Presentation
+
+### Multi-Device Brand Pitch Showcase
+![Bedaag Multi-Device Showcase](public/images/mockups/bedaag_brand_showcase.jpg)
+
+### Desktop & Workspace Mockup
+![Bedaag Desktop Mockup](public/images/mockups/bedaag_desktop_mockup.jpg)
+
+### Mobile & Rate Card Estimator Mockup
+![Bedaag Mobile Mockup](public/images/mockups/bedaag_mobile_mockup.jpg)
+
+---
+
 ## ✨ Features
 
 - **Sleek, App-like Design System:** Built with deep navy (`#0A192F`), laundry cyan (`#0EA5E9`), glassmorphism sticky header, and Plus Jakarta Sans typography.
