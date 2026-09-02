@@ -10,10 +10,37 @@ import {
   ArrowUp,
 } from 'lucide-react';
 
+const FacebookIcon = ({ size = 18, color = 'currentColor' }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill={color} style={{ display: 'block' }}>
+    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+  </svg>
+);
+
+const InstagramIcon = ({ size = 18, color = 'currentColor' }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke={color}
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    style={{ display: 'block' }}
+  >
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+  </svg>
+);
+
 export default function Footer({ onOpenBooking }) {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  const facebookUrl = 'https://www.facebook.com/people/BEDAAG-The-Dry-cleaners/100093749471836/';
+  const instagramUrl = 'https://www.instagram.com/bedaag_the_dry_cleaners';
 
   return (
     <footer
@@ -62,7 +89,7 @@ export default function Footer({ onOpenBooking }) {
               </div>
             </div>
 
-            <p style={{ fontSize: '0.9rem', lineHeight: 1.65, color: 'var(--slate-400)', marginBottom: '1.5rem' }}>
+            <p style={{ fontSize: '0.9rem', lineHeight: 1.65, color: 'var(--slate-400)', marginBottom: '1.25rem' }}>
               The word <em>Bedaag</em> represents our commitment to spotless, pristine, and unblemished garment care.
               Serving Gurugram with organic German solvents, Italian steam finishing, and free doorstep logistics.
             </p>
@@ -78,10 +105,100 @@ export default function Footer({ onOpenBooking }) {
                 padding: '0.35rem 0.75rem',
                 borderRadius: 'var(--radius-pill)',
                 border: '1px solid rgba(16, 185, 129, 0.25)',
+                marginBottom: '1.75rem',
               }}
             >
               <ShieldCheck size={14} />
               <span>100% Odor-Free & PERC-Free Certified</span>
+            </div>
+
+            {/* Social Media Channels */}
+            <div>
+              <div
+                style={{
+                  fontSize: '0.75rem',
+                  fontWeight: 700,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.08em',
+                  color: 'var(--slate-400)',
+                  marginBottom: '0.75rem',
+                }}
+              >
+                Follow Our Care Journey:
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                <a
+                  href={instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow Bedaag on Instagram"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.5rem',
+                    padding: '0.55rem 1rem',
+                    borderRadius: 'var(--radius-pill)',
+                    backgroundColor: 'rgba(255, 255, 255, 0.06)',
+                    color: 'var(--white)',
+                    border: '1px solid rgba(255, 255, 255, 0.12)',
+                    fontSize: '0.85rem',
+                    fontWeight: 600,
+                    transition: 'all 0.25s ease',
+                    textDecoration: 'none',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = '#E1306C';
+                    e.currentTarget.style.borderColor = '#E1306C';
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                    e.currentTarget.style.boxShadow = '0 4px 14px rgba(225, 48, 108, 0.4)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.06)';
+                    e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.12)';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = 'none';
+                  }}
+                >
+                  <InstagramIcon size={17} color="#FFFFFF" />
+                  <span>Instagram</span>
+                </a>
+
+                <a
+                  href={facebookUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow Bedaag on Facebook"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.5rem',
+                    padding: '0.55rem 1rem',
+                    borderRadius: 'var(--radius-pill)',
+                    backgroundColor: 'rgba(255, 255, 255, 0.06)',
+                    color: 'var(--white)',
+                    border: '1px solid rgba(255, 255, 255, 0.12)',
+                    fontSize: '0.85rem',
+                    fontWeight: 600,
+                    transition: 'all 0.25s ease',
+                    textDecoration: 'none',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = '#1877F2';
+                    e.currentTarget.style.borderColor = '#1877F2';
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                    e.currentTarget.style.boxShadow = '0 4px 14px rgba(24, 119, 242, 0.4)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.06)';
+                    e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.12)';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = 'none';
+                  }}
+                >
+                  <FacebookIcon size={17} color="#FFFFFF" />
+                  <span>Facebook</span>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -183,13 +300,41 @@ export default function Footer({ onOpenBooking }) {
             alignItems: 'center',
             justifyContent: 'space-between',
             flexWrap: 'wrap',
-            gap: '1rem',
+            gap: '1.25rem',
             fontSize: '0.8125rem',
             color: 'var(--slate-500)',
           }}
         >
           <div>
             © {new Date().getFullYear()} Bedaag The Dry Cleaners Pvt. Ltd. All rights reserved. Pristine Gurugram Garment Care.
+          </div>
+
+          {/* Social Links in Bottom Bar */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--slate-400)' }}>
+            <span style={{ fontSize: '0.8rem' }}>Connect:</span>
+            <a
+              href={instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: 'var(--slate-300)', display: 'flex', alignItems: 'center', gap: '0.35rem', transition: 'color 0.2s' }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = '#E1306C')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--slate-300)')}
+            >
+              <InstagramIcon size={15} />
+              <span>Instagram</span>
+            </a>
+            <span style={{ opacity: 0.4 }}>•</span>
+            <a
+              href={facebookUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: 'var(--slate-300)', display: 'flex', alignItems: 'center', gap: '0.35rem', transition: 'color 0.2s' }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = '#1877F2')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--slate-300)')}
+            >
+              <FacebookIcon size={15} />
+              <span>Facebook</span>
+            </a>
           </div>
 
           <button
